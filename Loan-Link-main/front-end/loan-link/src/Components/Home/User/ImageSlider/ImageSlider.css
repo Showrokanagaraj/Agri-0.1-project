@@ -1,0 +1,144 @@
+/* Container for the entire slider */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* Ensure space between image and text */
+  gap: 20px;
+  padding: 30px;
+  background-color: #f9f9f9;  /* Subtle light background for overall slider */
+}
+
+/* Fact box styling */
+.fact-box {
+  width: 50%;
+  padding: 30px;
+  background-color: #ffffff; /* Dark background for fact box */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  /* Slightly larger shadow for a more professional look */
+  border-radius: 12px;
+  color: #000000; /* Light font color for dark theme */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;  /* Full height to balance with the image */
+}
+
+.fact-box h4 {
+  font-size: 1.4em;
+  color: #000000; /* Soft teal for headings */
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase; /* More formal tone */
+  letter-spacing: 1px;
+}
+
+.fact-box p {
+  margin-top: 30px;
+  font-size: 1.1em;
+  color: #272626; /* Slightly lighter gray for text */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+.fact-box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.fact-box li {
+  font-size: 1em;
+  color: #000000;
+  line-height: 1.7;
+}
+
+.fact-box p + ul {
+  margin-top: 20px;  /* Add space between paragraph and list */
+}
+
+/* Styling for reveal container */
+.reveal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 450px;
+  width: 650px;
+  border: 4px solid #1e1e1e;
+  border-radius: 40px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.745, 0.11, 0.35, 0.845);
+}
+
+.reveal:hover {
+  background-color: #f7f7f7;
+  border: 4px solid #000000;
+}
+
+/* Initially hide the text */
+ h2, h3, .footer {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.reveal:hover h1,
+.reveal:hover h2,
+.reveal:hover h3,
+.reveal:hover .footer {
+  opacity: 1;
+}
+
+/* Fade out the image on hover */
+.pic {
+  position: absolute;
+  height: 450px;
+  width: 650px;
+  object-fit: cover;
+  z-index: 10;
+  border-radius: 40px;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.reveal:hover .pic {
+  opacity: 0;
+}
+
+/* Text styling for the reveal section */
+h1 {
+  margin-top: 50px;
+  color: #000000;
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 55px;
+  z-index: 5;
+  text-align: center;
+}
+
+h2 {
+  margin-top: auto;
+  color: #000000;
+  font-size: 25px;
+  font-weight: 500;
+  z-index: 5;
+}
+
+h3 {
+  margin-top: 30px;
+  color: #505050;
+  font-size: 30px;
+  z-index: 5;
+}
+
+.footer {
+  font-size: 20px;
+  margin-top: auto;
+  padding-bottom: 15px;
+  color: #b0b0b0;
+  z-index: 5;
+  font-style: italic;
+}
